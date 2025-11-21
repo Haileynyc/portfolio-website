@@ -53,6 +53,18 @@ var(--bs-bg-opacity) idk what this is
     background-color: #ABC3A8;
 }
 
+/* Links in card bodies need better contrast */
+.card-body a {
+    color: #2C5F7F;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-body a:hover {
+    color: #5D5956;
+    text-decoration: underline;
+}
+
 
 .bg-dark {
     --bs-bg-opacity: 1;
