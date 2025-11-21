@@ -73,21 +73,21 @@
 -->
 
     <!-- About section two-->
-    <section class="py-3 about-section">
+    <section id="about" class="py-5 about-section fade-in">
         <div class="container px-3 my-3">
             <div class="row gx-3 align-items-center">
                 <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0"
                         src="assets/hailey.jpg" alt="..." /></div>
                 <div class="col-lg-6">
-                    <h2 class="fw-bolder">Hi, I'm Hailey! Nice to meet you!</h2>
-                    <p class="lead fw-normal text-muted mb-0">Hi there! I’m a media designer and Digital Media
-                        Innovation student at Texas State University (Eat ’Em Up Cats!).
+                    <h2 class="fw-bolder fade-in">Hi, I'm Hailey! Nice to meet you!</h2>
+                    <p class="lead fw-normal text-muted mb-0">Hi there! I'm a media designer and Digital Media
+                        Innovation student at Texas State University (Eat 'Em Up Cats!).
 
-                        I currently work in restaurant management at one of the busiest Raising Cane’s locations in the
-                        Austin area, where I’ve honed my skills in team leadership, problem-solving, and operations in
+                        I currently work in restaurant management at one of the busiest Raising Cane's locations in the
+                        Austin area, where I've honed my skills in team leadership, problem-solving, and operations in
                         fast-paced environments.
 
-                        Beyond management, I’m passionate about digital media design including website creation,
+                        Beyond management, I'm passionate about digital media design including website creation,
                         branding, and social media content. I have experience with the Adobe suite including: Photoshop,
                         Illustrator, Premiere, and InDesign, and I'm very fluent with Canva. I love blending creativity
                         with technology to craft engaging and impactful digital experiences!
@@ -95,26 +95,26 @@
                         After graduation, I plan to pursue a career that combines design, technology, and storytelling,
                         ideally in digital media, marketing, product design, or UX/UI design.
 
-                        Let’s connect and collaborate!</p>
+                        Let's connect and collaborate!</p>
                 </div>
             </div>
         </div>
     </section>
     <!-- Page Content-->
-    <section class="py-5 testimonial-section">
+    <section id="portfolio" class="py-5 testimonial-section">
 
 
         <header class="py-5 m-3 welcome-header">
             <div class="container px-lg-5">
                 <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
                     <div class="m-4 m-lg-5">
-                        <h1 class="display-5 fw-bold">Get to know my work!</h1>
+                        <h1 class="display-5 fw-bold fade-in">Get to know my work!</h1>
 
 
                         <section class="card-section">
                             <div class="row gx-lg-5 justify-content-center">
                                 <div class="row gx-lg-5">
-                                    <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="col-lg-4 col-xxl-4 mb-5 fade-in fade-in-delay-1">
                                         <div class="card bg-light border-0 h-100 feature-card">
                                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                                 <div
@@ -126,7 +126,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="col-lg-4 col-xxl-4 mb-5 fade-in fade-in-delay-2">
                                         <div class="card bg-light border-0 h-100 feature-card">
                                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                                 <div
@@ -138,7 +138,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-xxl-4 mb-5">
+                                    <div class="col-lg-4 col-xxl-4 mb-5 fade-in fade-in-delay-3">
                                         <div class="card bg-light border-0 h-100 feature-card">
                                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                                 <div
@@ -184,12 +184,24 @@
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 
-
-
+html {
+    scroll-behavior: smooth;
+}
 
 /* colors:
 
@@ -230,7 +231,7 @@ a:hover {
 }
 
 .fallback {
-  display: none;          /* shown only if PDF can’t render */
+  display: none;          /* shown only if PDF can't render */
 }
 
 .social-icons {
@@ -259,4 +260,45 @@ a:hover {
     color: #5D5956 !important;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.about-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.testimonial-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.display-5 {
+    margin-top: 4rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.fade-in-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.fade-in-delay-3 {
+    transition-delay: 0.3s;
 }
