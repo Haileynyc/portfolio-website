@@ -222,10 +222,13 @@ a:hover {
     margin: 0 auto;
 }
 
-#graphicsCarousel {
-    margin-top: 3rem;
+#biteClubCarousel .carousel-inner {
+    max-width: 100%;
 }
 
+#biteClubCarousel .carousel-item img {
+    width: 100% !important;
+}
 
 .carousel-item img {
     height: 100%;
@@ -237,10 +240,121 @@ a:hover {
     margin: 0 auto;
 }
 
-/* Dark carousel controls for light backgrounds */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1) grayscale(100%);
+/* Carousel wrapper for external arrow positioning */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 700px;
+}
+
+.carousel-wrapper #graphicsCarousel {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-wrapper #graphicsCarousel .carousel-inner {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+.carousel-wrapper #graphicsCarousel .carousel-item {
+    height: 100%;
+}
+
+.carousel-wrapper #graphicsCarousel .carousel-item img {
+    max-height: 100%;
+    width: auto !important;
+    margin: 0 auto;
+}
+
+/* Position arrows outside for first carousel */
+.carousel-wrapper #graphicsCarousel .carousel-control-prev,
+.carousel-wrapper #graphicsCarousel .carousel-control-next {
+    width: auto;
+}
+
+.carousel-wrapper #graphicsCarousel .carousel-control-prev {
+    left: -15px;
+}
+
+.carousel-wrapper #graphicsCarousel .carousel-control-next {
+    right: -15px;
+}
+
+/* Dark arrows for first carousel to match magazine carousel */
+.carousel-wrapper #graphicsCarousel .carousel-control-prev-icon,
+.carousel-wrapper #graphicsCarousel .carousel-control-next-icon {
+    filter: invert(1) grayscale(100%) !important;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Consistent height for magazine carousels so arrows stay fixed */
+#graphicsCarousel2,
+#biteClubCarousel {
+    height: 700px;
+    width: 100%;
+    position: relative;
+}
+
+#graphicsCarousel2 .carousel-inner,
+#biteClubCarousel .carousel-inner {
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+}
+
+#graphicsCarousel2 .carousel-item,
+#biteClubCarousel .carousel-item {
+    height: 100%;
+}
+
+#graphicsCarousel2 .carousel-item img,
+#biteClubCarousel .carousel-item img {
+    max-height: 100%;
+    width: auto !important;
+    margin: 0 auto;
+}
+
+/* Position arrows outside for second and third carousels */
+#graphicsCarousel2 .carousel-control-prev,
+#graphicsCarousel2 .carousel-control-next,
+#biteClubCarousel .carousel-control-prev,
+#biteClubCarousel .carousel-control-next {
+    width: auto;
+}
+
+#graphicsCarousel2 .carousel-control-prev,
+#biteClubCarousel .carousel-control-prev {
+    left: -15px;
+}
+
+#graphicsCarousel2 .carousel-control-next,
+#biteClubCarousel .carousel-control-next {
+    right: -15px;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: auto !important;
+    max-height: 750px;
+    object-fit: contain;
+    object-position: center center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Brighter, clearer controls on dark Artifacts magazine pages */
+#graphicsCarousel2 .carousel-control-prev-icon,
+#graphicsCarousel2 .carousel-control-next-icon,
+#biteClubCarousel .carousel-control-prev-icon,
+#biteClubCarousel .carousel-control-next-icon {
+    filter: invert(1) grayscale(100%) !important; /* dark arrows */
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* Darker, visible carousel indicators on light images */
@@ -318,7 +432,7 @@ section {
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
 .fade-in.visible {
