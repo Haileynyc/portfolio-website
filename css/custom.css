@@ -218,15 +218,34 @@ a:hover {
 
 .carousel-inner {
     height: auto;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 
 .carousel-item img {
     height: 100%;
     width: auto !important;
-    max-height: 500px;
+    max-height: 750px;
     object-fit: contain;
     object-position: center center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Dark carousel controls for light backgrounds */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) grayscale(100%);
+}
+
+/* Darker, visible carousel indicators on light images */
+.carousel-indicators [data-bs-target] {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.carousel-indicators .active {
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 
