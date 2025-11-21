@@ -222,6 +222,10 @@ a:hover {
     margin: 0 auto;
 }
 
+#graphicsCarousel {
+    margin-top: 3rem;
+}
+
 
 .carousel-item img {
     height: 100%;
